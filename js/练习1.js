@@ -37,36 +37,7 @@ var option = {
             color:"#74b9ff",        
             data: [19325,23438,31000,121594,134141,681807]
         }
-        // {
-        //     name:"Brazil",
-        //     type:"bar",
-        //     data:[18203,19325],
-        // },
-        // {
-        //     name:"Indonesia",
-        //     type:"bar",
-        //     data:[23489,23438],
-        // },
-        // {
-        //     name:"USA",
-        //     type:"bar",
-        //     data:[29034,31000],
-        // },
-        // {
-        //     name:"India",
-        //     type:"bar",
-        //     data:[104970,121594],
-        // },
-        // {
-        //     name:"China",
-        //     type:"bar",
-        //     data:[131744,134141],
-        // },
-        // {
-        //     name:"World",
-        //     type:"bar",
-        //     data:[630230,681807],
-        // }
+     
     ]
 }
 

@@ -8,33 +8,163 @@ var option = {
 
     legend: {
         show: true,
+        // legend的data要和 series的name保持一致
         data: ['蒸发量', '降水量', '最高气温', '最低气温'],
     },
+    tooltip:{
 
+    },
+    toolbox:{
+
+    },
     xAxis: [
         {
             type: 'category',
             position: "bottom",
-            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
-            axisLine: {
-                show: true,
-
-            }
-
+            
+            // 轴线 文本也绿了
+            axisLine:{
+                lineStyle:{
+                    color:'green',
+                    type:'solid',
+                    width:2
+                }
+            },
+            // 刻度标记
+            axisTick:{
+                show:true,
+                length:10,
+                lineStyle:{
+                    color:'blue',
+                    type:'solid',
+                    width:2
+                }
+            },
+            // 轴文本标记
+            axisLabel:{
+                show:true,
+                interval:'auto',
+                rotate:45,
+                margin:8,
+                formatter:'{value}月', //格式化
+                textStyle:{
+                    color:'blue',
+                    fontFamily:'sans-serif',
+                    fontSize:15,
+                    fontStyle:'italic',
+                    fontWeight:'bold'
+                }
+            },
+            // 
+            splitLine:{
+               show:true,
+               lineStyle:{
+                   color:'#483d8b',
+                   type:'dashed', //虚线dashed
+                   width:1
+               } 
+            },
+            splitArea:{
+                show:true,
+                areaStyle:{
+                    color:['rgba(144,238,144,0.3)','rgba(135,200,250,0.3)']
+                }
+            },
+            data: [
+                '1', '2', '3', '4', '5', 
+                // 个性化
+                {
+                    value:'6',
+                    textStyle:{
+                        color:'gray',
+                        fontSize:30,
+                        fontStyle:'normal',
+                        fontWeight:'bold',
+                    }
+                },
+                '7', '8', '9', '10', '11', '12'],
         },
-        {
+        {   
+            type:'category',
             data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         }],
     yAxis: [
         {
             type:"value",
             position:"left",
-        }, 
-        {
-            type:"value",
-            position:"right",
-            
-        }
+            // boundaryGap:[0,0.1],
+            axisLine:{
+                show:true,
+                lineStyle:{
+                    color:'red',
+                    type:'dashed',
+                    width:2
+                }
+            },
+            axisTick:{
+                show:true,
+                length:10,
+                lineStyle:{
+                    color:'green',
+                    type:'solid',
+                    width:2
+                }
+            },
+            // 标签文本
+            axisLabel: {
+                show: true,
+                interval:'auto',
+                rotate:-45,
+                margin:18,
+                formatter:'{value} ml',
+                textStyle:{
+                    color:'#1e90ff',
+                    fontFamily:'verdana',
+                    fontSize:10,
+                    fontStyle:'normal',
+                    fontWeight:'bold'
+                }
+            },
+            splitLine:{
+                show:true,
+                lineStyle:{
+                    color:'#483d8b',
+                    type:'dotted',
+                    width:2
+                }
+            },
+            splitArea:{
+                show:true,
+                areaStyle:{
+                    color:['rgba(205,92,92,0.3)','rgba(255,215,0,0.3)']
+                }
+            }
+            },
+            {
+                type:'value',
+                splitNumber:10,
+                axisLabel:{
+                    formatter:function(value){
+                        return value +' °C'
+                    }
+                },
+                splitLine:{
+                    show:false,
+                }
+            },
+
+        //     // 坐标轴上刻度
+        // }, 
+
+        // {
+        //     type:"value",
+        //     position:"right",
+        //     // 标签文本
+        //     axisLabel: {
+        //         show: true,
+        //         formatter:'{value}°C',
+        //     }
+        // }
     ],
     series: [
         {
