@@ -1,0 +1,261 @@
+/* 内容的盒子 */
+.main {
+    width: 1200px;
+    height: 2500px;
+    background: #fff;
+}
+/* 标签+翻角 */
+.dio-wrap {
+    width: 100%;
+    height: 200px;
+    background: #6c5ce7;
+}
+/* 翻角代码 */
+.dio01 {
+    width: 10%;
+	height: 200px;
+	display: flex;
+}
+.container {
+	background:#6c5ce7;
+	display: inline-block;
+	font-size: 20px;
+	position: relative;
+}
+/* 动画盒子 */
+.myCanvas {
+	width: 200px;
+	height: 200px;
+	display: block;
+}
+/* 标签 */
+.dio02 {
+    width: 90%;
+    height: 200px;
+    text-align: center;
+}
+/* 标签文字 */
+.dio02 p {
+    width: 300px;
+    font-size: 40px;
+    margin-top: 120px;
+    margin-left: 300px;
+    color: #fff;
+}
+.dio02 p span:nth-child(2) {
+    font-family: 'icomoon';
+    color: #fff;
+}
+/* 中间的大盒子 */
+.bqdq {
+    width: 100%;
+    height: 1800px;
+}
+/* 左列,装备大全 */
+.bq-left {
+    float: left;
+    width: 67%;
+    height: 1800px;
+}
+.bq-left ul {
+    display: flex;
+    justify-content: space-around;
+    align-self: start;
+    flex-wrap: wrap;
+}
+.bq-left ul li {
+    width: 600px;
+    height: 300px;
+    margin: 20px;
+    font-size: 15px;
+    border: 2px solid #a29bfe;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+/* 改之后的显示 */
+.bq-left ul  .bq-le-item:hover {
+    box-shadow:5px 5px 2px #a29bfe;
+}
+/* 改之后的样式 */
+.bq-le-item .bq-le-pic {
+    float: left;
+    width: 260px;
+    height: 300px;
+}
+.bq-le-item .bq-le-pic img {
+    width: 260px;
+    height: 298px;
+    border-radius: 20px 0 0 20px;
+    box-sizing: border-box;
+}
+.bq-le-item .bq-le-at {
+    float: right;
+    width: 315px;
+    height: 300px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+   justify-content: space-between;
+    align-content: flex-end;
+}
+.bq-le-at .bq-title a {
+    font-size: 24px;
+    color: #000;
+    
+}
+.bq-le-at p:nth-of-type(2) {
+    cursor: pointer;
+    font-size: 18px;
+    width: 320px;
+    display: flex;
+    flex-direction:row;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.bq-le-at p:nth-of-type(2) span {
+    color: #333;
+}
+/* 右列  */
+.bq-right {
+    float: right;
+    width: 33%;
+    height: 2800px;
+    margin-top: -145px;
+}
+.bq-right .b1-rig00 {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-self: start;
+    flex-wrap: wrap;
+    
+}
+.bq-right .b1-rig00 .rig0 {
+    width: 360px;
+    height: 488px;
+    margin: 0px 10px 40px 0px;
+    background-color: #a29bfe;
+    
+}
+.bq-right .b1-rig00 .bq-act {
+    height: 1300px;
+}
+.bq-right .b1-rig00 .bq-inq {
+    height: 400px;
+}
+/* 新闻 文字*/
+.rig0 h3{
+    font-size: 25px;
+    width: 360px;
+    height: 30px;
+    margin: 20px;
+    color: #6c5ce7;
+}
+/* 最新 */
+.bq-news .news-left ,
+.bq-act .bq-ac,
+.bq-inq .bq-inq1 {
+    width: 340px;
+    height: 80%;
+    background: #fff;
+    margin: 0 auto;
+}
+/* 新闻 */
+/* 文字 */
+.bq-news .news-left p {
+    margin-bottom: 20px;
+}
+.bq-news .news-left p span {
+    font-size: 20px;
+    margin-left: 40px;
+}
+.bq-news .news-left p span:nth-of-type(2) {
+    margin-left:80px;
+}
+/* 伪线 */
+.bq-news .news-left .new-ll {
+    float: right;
+    width: 200px;
+    height: 40px;
+    border-bottom: 2px solid #6c5ce7;
+    border-left:  2px solid #6c5ce7;
+    margin-top: -49px;
+    box-sizing: border-box;
+}
+/* 文字 */
+.bq-news .news-left .news-item {
+    width: 340px;
+    height: 80px;
+    margin-top: 10px;
+}
+.bq-news .news-left .news-item span {
+    float: left;
+    cursor: pointer;
+    margin-left: 5px;
+    
+}
+.bq-news .news-left .news-item span:nth-of-type(1) {
+    color: #6c5ce7;
+    font-size: 15px;
+}
+.bq-news .news-left .news-item span:nth-of-type(2) {
+    color: #6c5ce7;
+    font-size: 15px;
+}
+.bq-news .news-left .news-item span:nth-of-type(3) {
+    color: #000;
+    margin-left: 20px;
+    font-size: 18px;
+    width: 180px;
+    height: 40px;
+    float: right;
+    margin-right: 30px;
+    margin-top: -5px;
+}
+.bq-news .news-left .news-item:nth-last-of-type(1) span {
+    margin-left: 10px;
+    color: #6c5ce7;
+    font-size: 20px;
+}
+/* 荐选文章 */
+.bq-act .bq-ac {
+    width: 340px;
+    height: 90%;
+    background: #fff;
+}
+.bq-act .bq-ac .bq-a0 {
+    width: 320px;
+    height: 260px;
+    margin: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.bq-act .bq-ac .bq-a0 img {
+    width: 320px;
+    height: 200px;
+    margin-top: 20px;
+}
+.bq-act .bq-ac .bq-a0 img:hover {
+    border:.2px solid #333;
+}
+.bq-act .bq-ac .bq-a0 p {
+    width: 300px;
+    font-size: 18px;
+}
+.bq-act .bq-ac .bq-a0 p a {
+    color: #000;
+}
+.bq-act .bq-ac .bq-a0 p a:hover {
+    color: rgb(107, 107, 107);
+}
+/* 小调查 */
+.bq-right .bq-inq1 li,
+.bq-right .bq-inq1 p {
+    font-size: 20px;
+    margin: 20px;
+}
+.bq-right .bq-inq1 p {
+    padding-top: 20px;
+    font-style: 20px;
+}

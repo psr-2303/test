@@ -1,0 +1,453 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.header-wrap {
+    top:20px;
+    width: 100%;
+    height: 300px;
+    background:black;
+}
+body {
+    /* width: 1200px; */
+    margin: 0 auto;
+}
+/* 头部 */
+.header-inwide {
+    height: 300px;
+    width: 100%;
+    background: url(../img/主页/主体形象区/天问一号02.jpg) no-repeat;
+    /* 设置图片大小使天问一号发射点在中间 */
+    background-size: 1200px 480px;
+}
+/* 导航栏外部 */
+.caption {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background: #636e72;
+    top:0;
+    z-index: 1;
+}
+/* 导航内部 */
+.caption-center {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background: #636e72;
+}
+.caption-center>ul li {
+    float: left;
+}
+/* logo */
+.logo {
+    position: absolute;
+    margin: 5px;
+}
+.logo img {
+    position: absolute;
+}
+.logo img,
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+/* 首页图标 */
+.home {
+    position: absolute;
+    left: 90px;
+    top: 3px;
+}
+.home,
+.nav,
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    position: relative;
+    padding: 12px;
+    border-radius: 25px;
+    background: #000;
+    z-index: 1;
+}
+.nav input {
+    width: 30px;
+    height: 30px;
+    /* 不透明度为0 */
+    cursor: pointer;
+    opacity: 0;
+}
+.nav span {
+    position: absolute;
+    left: 12px;
+    /* calc计算数值方法，先将2条线并在一起，后调第2线位置 */
+    top: calc(50% - 10px);
+    width: 30px;
+    height: 4px;
+    border-radius: 15px;
+    background-color: #fff;
+    /* 解决span覆盖着复选框，鼠标点不中复选框的问题 */
+    pointer-events: none;
+    /* 收回时相反 */
+    transition: transform 0.3s ease-in-out,top 0.3s
+    ease-in-out 0.3s;
+    font-size:20px;
+}
+/* 第2条线 */
+.nav span:nth-child(2) {
+    top: calc(50% + 6px);
+}
+.nav ul {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transform: all 0.5s;
+}
+.nav ul li {
+    margin: 0 auto;
+}
+.nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+.nav ul li a:hover {
+    color: #636e72;
+}
+/* ~兄弟选择器，查找同级ul checkec选中复选框时 */
+.nav input:checked ~ ul {
+    width: 350px;
+}
+/* 画XX */
+.nav input:checked ~ span:nth-child(2) {
+    top: calc(50% - 2px);
+    transform: rotate(-45deg);
+    background: #636e72;
+    transition: top 0.3s ease-in-out,transform 0.3s
+    ease-in-out 0.3s;
+}
+.nav input:checked ~ span:nth-child(3) {
+    top: calc(50% - 2px);
+    transform: rotate(45deg);
+    background: #636e72;
+    transition: top 0.3s ease-in-out,transform 0.3s
+    ease-in-out 0.3s;
+}
+/* 搜索框外部 */
+.search-wrap {
+    position: absolute;
+    top:5px;
+    left: 500px;
+    width: 300px;
+    height: 50px;
+    background: #000;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+/* 搜索框 */
+.search {
+    position: absolute;
+    width: 260px;
+}
+.search input {
+    border-radius: 5px;
+}
+/* 提交按钮 */
+.search input[type="submit"] {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    font-family: 'icomoon';
+    font-size: 28px;
+    color: #b8b7b7;
+    background: #636e72;
+}
+/* 搜索框条 */
+.search input[type="search"] {
+    position: absolute;
+    top:8px;
+    left:58px;
+    width:85%;
+    height: 34px;
+}
+
+/* 右侧 */
+/* 投稿 */
+.tog {
+    position: absolute;
+    right: 260px;
+    height: 50px;
+    width: 100px;
+    background: #000;
+    margin: 5px;
+    border-radius: 15px;
+}
+.tog a {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: #fff;
+}
+.tog:hover {
+    border:2px solid #fff;
+}
+/* 头像 */
+.profile {
+    position: absolute;
+    right: 160px;
+    top: 2px;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: #000;
+}
+.profile img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+/* 显示 */
+.profile:hover .pro_box1 {
+    visibility: visible;
+}
+.pro_box1 {
+    visibility: hidden;
+    position: absolute;
+    font-size: 20px;
+    width: 230px;
+    height: 400px;
+    cursor: pointer;
+    color: #fff;
+    transition:all 0.5s ;
+}
+.pro_box2 {
+    position: absolute;
+    top: -5px;
+    left: -15px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    z-index: 1;
+    transition:all 0.5s ;
+}
+.pro_box2 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.pro_box3 {
+    position: absolute;
+    top: 40px;
+    left: -120px;
+    width: 300px;
+    height: 440px;
+    background: #000;
+    text-align: center;
+    /* overflow: hidden; */
+    padding-top: 50px;
+    transition:all 0.5s ;
+    -webkit-transition: all 0.5 ;
+}
+/* 经验值 */
+.pro_box3 .pro_it .pro_it01 {
+    margin-bottom: 10px;
+}
+.pro_box3 .pro_it .pro_it01 span:nth-of-type(2) {
+    margin-left:40px;
+}
+/* 经验进度条 */
+.pro_ll,.pro_ll2,.pro_ll03 {
+    height: 0px;
+    box-sizing: border-box;
+}
+.pro_ll {
+    margin-left: 40px;
+    width: 230px;
+    
+    box-sizing: border-box;
+    border-bottom: 2px solid #fff;
+}
+.pro_ll2 {
+    width: 149.5px;
+    border-bottom: 2px solid rgb(233, 47, 47);
+}
+/* 分割线 */
+.pro_ll03 {
+    margin: 0 auto;
+    width: 230px;
+    border-bottom: 2px solid #636e72;
+}
+/* 关注框 */
+/* 关注信息 */
+.pro_it02 p {
+    width: 230px;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    flex-wrap: wrap;
+    margin: 0  0 0 30px;
+}
+.pro_it02 p:nth-of-type(1) {
+    margin-top:10px;
+}
+.pro_it02 p:nth-of-type(2) {
+    margin-bottom:10px;
+}
+/* 个人中心开始 */
+.pro_box3 .pro_item {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.pro_box3 .pro_item  span:nth-of-type(1) {
+    font-family: 'icomoon';
+    color: #fff;
+}
+/* 消息+动态 */
+.msg,
+.fo {
+    position:absolute;
+    top: 20px;
+    right: 0;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+/*  动态*/
+.fo {
+    right: 80px;
+}
+
+
+/* 页脚 */
+footer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: #353b48;
+}
+/* 页脚左边 */
+footer .left-footer {
+    float: left;
+    width: 500px;
+    height: 300px;
+    height: 280px;
+    margin: 5px;
+    /* background: tomato; */
+}
+footer .left-footer img {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+/* 页脚右边 */
+footer .right-footer {
+    width: 500px;
+    height: 280px;
+    margin: 5px;
+    /* background: tomato; */
+    float: right;
+}
+/* 页脚中线 */
+footer .middle-line {
+    position: absolute;
+    top:40px;
+    width: 200px;
+    border: 0.2px solid #7f8fa6;
+}
+footer .left-footer .middle-line {
+    float: left;
+}
+footer .right-footer .middle-line {
+    position: absolute;
+    right: 25px;
+}
+/* 页脚文字 */
+footer p {
+    font-size: 15px;
+    margin-left: 10px;
+    color: #7f8fa6;
+}
+/* 让右边仅第一块文字不居右 */
+footer .right-footer p:nth-child(1+n) {
+    position: absolute;
+    right: 25px;
+}
+footer .left-footer p:nth-child(1) {
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 0;
+}
+footer p:nth-child(5){
+    position: absolute;
+    bottom: 20px;
+}
+footer .left-footer p:nth-child(5){
+    left:10px;
+}
+footer .right-footer p:nth-child(5){
+    right: 25px;
+}
+footer .right-footer p:nth-child(4) {
+    position: absolute;
+    top: 140px;
+    right: 25px;
+}
+footer .right-footer p:nth-child(3) {
+    position: absolute;
+    top: 160px;
+    right: 25px;
+}
+/* 页脚字体图标 */
+footer .icon-Footer {
+    position: absolute;
+    top: 60px;
+    right: 25px;
+}
+footer .icon-Footer li {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+footer .icon-Footer li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    font-family: 'icomoon' ;
+}
+footer .icon-Footer li:nth-child(1) a::before {
+    content: "";
+    color: #fff;
+}
+footer .icon-Footer li:nth-child(2) a::before {
+    content: "";
+    color: #0066ff;
+    /* 知乎蓝 */
+}
+footer .icon-Footer li:nth-child(3) a::before {
+    content: "";
+    color: red;
+    /* 不知道微博的色号，所以qaq */
+}
+footer .icon-Footer li p {
+    margin-left: 0px;
+}

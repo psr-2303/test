@@ -1,0 +1,655 @@
+
+/* 内部 */
+.main {
+    height: 4500px;
+    width: 100%;
+    background: #fff;
+}
+/* 轮播图 */
+.lbt {
+    position: relative;
+    top: 30px;
+    left: 60px;
+    width: 90%;
+    height: 660px;
+    background:#dfe6e9;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+/* 轮播图 图片 */
+.lbt .pic img {
+    position: absolute;
+    display:inline-block;
+    width: 1060px;
+    height: 600px;
+    padding: 30px 50px 30px 60px;
+    box-sizing: border-box;
+}
+/* 箭头图标 */
+.prev,
+.next {
+    width: 50px;
+    height: 50px;
+    background: #f0f0f0;
+    font-size: 40px;
+    font-family: 'icomoon' ;
+    color: #74b9ff;
+}
+/* 箭头边框位置 */
+.prev {
+    position: absolute;
+    top:50%;
+    left:-20px;
+}
+.next {
+    position: absolute;
+    top:50%;
+    right:-20px;
+}
+/* 左箭头 */
+.lbt .arrow .prev::after {
+    position: absolute;
+    top:-2px;
+    left: 8px;
+    content: "";
+}
+/* 右箭头 */
+.lbt .arrow .next::after {
+    position: absolute;
+    top: -2px;
+    left: 8px;
+    content: "";
+}
+/* 小圆点 */
+.sclice {
+    position:absolute;
+    left: 430px;
+    bottom: 50px;
+    height: 50px;
+    width: 190px;
+    background: #dfe6e9;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.sclice li {
+    float: left;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #74b9ff;
+    border: 2px solid #d2dae2;
+    box-sizing: border-box;
+    margin-left:15px;
+    margin-top: 15px;
+}
+/* 第一个小圆点 */
+.sclice li:first-child {
+    background: #d2dae2;
+    border: 2px solid #74b9ff ;
+    box-sizing: border-box;
+}
+
+/* 要闻时政 */
+.news-wrap {
+    display: block;
+    position: relative;
+    top:50px;
+    height:760px;
+    background: #fff;
+    box-sizing: border-box;
+}
+/* 要闻h2 */
+.news-wrap h2 {
+    color:#5bbad0 ;
+    font-size: 28px;
+}
+/* 切换块 */
+.slide-box,
+.new {
+    float: left;
+    height: 560px;
+    width: 560px;
+    margin: 20px 20px 20px 20px;
+}
+/* 左视频 */
+.slide-box .sclide_2 {
+    margin-top: 50px;
+    width: 560px;
+    height: 560px;
+    background: #5bbad0;
+    text-align: center;
+    padding-top: 20px;
+}
+ .sclide_2 .slide_pic {
+    display: block;
+    width: 460px;
+    height: 400px;
+    margin: 10px auto;
+    background: #fff;
+    border-radius: 24px;
+}
+.slide-box .slide_pic img,
+.slide-box .slide_pic .m {
+    width: 440px;
+    height: 380px;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+}
+.slide-box .slide_pic img {
+    margin-top: 10px;
+    display: block;
+}
+/* 遮罩 */
+.slide-box .slide_pic .m {
+    position: absolute;
+    background: url(../img/主页/bcb3.png) no-repeat rgba(0, 0, 0, .3) center;
+    display: none;
+}
+.slide-box .slide_pic:hover .m {
+    display: block;
+}
+/* 视频字体 */
+.slide-box .sclide_2 p a {
+    font-size: 25px;
+    line-height: 120px;
+    color: #fff;
+}
+/* 最新 */
+.new {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.new_box0 {
+    position: relative;
+    top: 100px;
+    width: 600px;
+    height: 600px;
+    background: #fff;  
+}
+.new_box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    width: 500px;
+    height: 500px;
+    background: #5bbad0;
+    margin: 30px auto;
+    box-shadow: 20px 20px 0 #90caca;
+    box-sizing: border-box;
+}
+/* 小倒三角 */
+.new_box3 {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color:  #268ea5  #268ea5 transparent transparent;
+}
+.new_box1 .new-it li a {
+    font-size: 18px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.new_box1 .new-it li a:hover {
+    color:#d2e9e9;
+}
+/* 过渡线？？ */
+.new_box1 .new-it .new-it_mL {
+    width: 485px;
+    height: 4px;
+    border-top:1px dashed #82ccdd ;
+    margin-left: 5px;
+}
+.new_box2 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 100px;
+    height: 70px;
+    background: #5bbad0;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 0 #268ea5;
+    text-align: center;
+}
+.new_box2 p {
+    margin: 10px 0 0 0;
+}
+.new_box2 p a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #d2e9e9;
+}
+.new_box2 p a:hover {
+    color: #fff;
+}
+
+
+/* 军事纵横 */
+.mili {
+    /* display: block; */
+    position: relative;
+    top:0;
+    height: 960px;
+    /* background: #6c5ce7; */
+    background: #fff;
+}
+/* 军事纵横内部 */
+.mili .mi-section {
+    position: absolute;
+    height: 920px;
+    width: 1150px;
+    margin: 20px;
+    /* margin-top: 30px; */
+}
+/* 军事纵横li */
+.mili .mi-section li {
+    position: relative;
+    float: left;
+    height: 430px;
+    width: 360px;
+    margin-top: 20px;
+    margin-left: 20px;
+    /* box-shadow: -10px 10px 10px #268ea5; */
+}
+/* 伪类横线 */
+.mi-cline {
+    /* position: relative; */
+    position: absolute;
+    top: 40px;
+    width: 140px;
+    height: 0;
+    border-bottom: 2px solid #6c5ce7;
+    color:gray;
+ } 
+.mi-mline {
+    position: absolute; 
+    top:50px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+} 
+/* 军事纵横里面的首行文字 */
+.mili .mi-item .mili-se {
+    color: #6c5ce7;
+    font-size: 28px;
+}
+.mi-item a p:nth-of-type(1) {
+    padding-left: 10px;
+    font-size: 15px;
+    line-height: 40px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.mi-item a p:nth-of-type(1):hover {
+    color: #6c5ce7;
+}
+/* 军事纵横图片 */
+.mi-item .mi-pic {
+    margin-top: 20px;
+    box-shadow: -1px 0 5px #6c5ce7;
+}
+.mi-item .mi-pic img {
+    display: inline-block;
+    width: 345px;
+    height: 230px;
+    margin: 5px;
+}
+/* 军媒 */
+.mi-se {
+    position: relative;
+    height: 430px;
+    width: 360px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.mi-se .pic_01 
+,.mi-se .pic_02
+,.mi-se .pic_02 .pic_03 {
+    float: left;
+}
+.mi-se .pic_01 img {
+    cursor: pointer;
+    display: inline-block;
+    width: 172px;
+    height: 340px;
+    margin: 20px 0px 20px 20px;
+}
+.mi-se .pic_02 {
+    float: left;
+    width: 70px;
+    height: 340px;
+    margin-top: 10px;
+}
+.mi-se .pic_02 .pic_03 {
+    float: left;
+    height: 90px;
+    width: 75px;
+    margin: 10px;
+}
+.mi-se .mi-se01 p {
+    text-align: center;
+}
+.mi-se .pic_02 img {
+    display: inline-block;
+    width: 40px;
+    height: 55px;
+    margin: 5px;
+    margin-left: 20px;
+}
+.mi-se .pic_01 img:hover ,
+.mi-se .pic_02 .pic_03 img:hover ,
+.mi-item .mi-pic:hover {
+    border:.2px solid #333;
+    box-sizing: border-box;
+ }
+/* 史海钩沉 */
+.h0 {
+    /* 设置flex布局 居中居中*/
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    /* 组元素对齐为侧起点对齐 */
+    align-items: flex-start;
+    width: 1200px;
+}
+/* 史海里面的盒子，设主要样式 */
+.history {
+    display: flex;
+    /* 重要，弹性元素拉伸到盒子相同的高或宽 */
+    align-items: stretch;
+    min-width: 600px;
+    max-width: 1200px;
+    /* calc计算方式,里面计算式 100%宽度 - 50px */
+    width: calc(100% - 50px);
+    height: 400px;
+	margin:30px;
+    margin-top: 0;
+}
+/* 子元素 li*/
+.history .set {
+    position: relative;
+    overflow: hidden;
+    min-width: 60px;
+    margin: 10px;
+    /* 规定背景图像尺寸 */
+    background-size: auto 120%;
+    background-position: center;
+    cursor: pointer;
+    /* 加个过渡 贝塞尔曲线，生成速度，中间缓慢前后速度一致*/
+    transition: 0.5s cubic-bezier(0.17, 0.86, 0.73, 0.14);
+}
+/* 被选中的li */
+.history .set.scli {
+    /* 剩余空间分配 4 */
+    flex-grow: 4;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    max-width: 600px;
+    margin: 0px;
+    border-radius: 40px;
+    background-size: auto 100%;
+    /*&:scli {
+     transform:scale(0.9);
+  }*/
+}
+/* 遮罩 */
+.history .set.scli .mask {
+    /* 搞个内部阴影*/
+    box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 120px -100px black;
+}
+.history .set.scli .label {
+    bottom: 20px;
+    left: 20px;
+}
+/* 未显示的li的份额*/
+.history .set:not(.scli) {
+    flex-grow: 1;
+    border-radius: 30px;
+}
+.history .set:not(.scli) .mask {
+    bottom: -40px;
+    box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+}
+.history .set:not(.scli) .label {
+    bottom: 10px;
+    left: 10px;
+}
+.history .set .mask {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 120px;
+    transition: all 0.5s ;
+}
+.history .set .label {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    transition:all 0.5s;
+}
+.history .set .label .his1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 5px;
+    color: white;
+    /* 设置保留空白，不然文字直接并入*/
+    white-space: pre;
+}
+.history .set .label .his1>div {
+    position: relative;
+    transition: 0.5s ;
+}
+.history .set .label .his1 .h1p1 {
+    font-weight: bold;
+}
+.history .set .label .his1 .h1p2 {
+    /* 过渡效果等待时间 试验中*/
+    transition-delay: .1s;
+}
+/* 字体 */
+.history li  a {
+    height: 20px;
+    color: #fff;
+}
+.history li .h1p1 a:nth-child(1) {
+    margin-left:-90px; 
+    font-size: 25px;
+}
+.history li .h1p2 a:nth-child(1) {
+    margin-left:-100px; 
+    /* height: 18px; */
+    font-size: 15px;
+    /* color: plum; */
+}
+
+/* 航天航空 */
+.air {
+    position: relative;
+    height: 860px;
+    width: 100%;
+    background:#fff;
+}
+.air ul li {
+    height: 360px;
+    width: 1150px;
+    background: #74b9ff;
+    border-radius: 25px;
+    box-sizing: border-box;
+    margin: 20px;
+}
+.air ul li:hover {
+    box-shadow: 5px 5px 10px #74b9ff;
+}
+.above-air {
+    position: absolute;
+    left: 5px;
+}
+.under-air {
+    position: absolute;
+    top:50%;
+    right: 5px;
+}
+.air ul  .above-air .left ,
+.air ul  .under-air .left {
+    height: 360px;
+    width: 600px;
+    background: #dfe6e9;
+    /* border-radius: 20px 0 0 20px; */
+}
+/* 航天航空 图片*/
+.air ul li img {
+    height: 340px;
+    width: 560px;
+    background: chartreuse;
+    margin: 20px;
+    margin-top: 10px;
+    border-radius: 20px 0 0 20px;
+}
+.air h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding-left: 20px;
+    color: #74b9ff;
+    margin: 5px;
+}
+/*航天航空文字和位置 */
+.air ul .above-air .right
+,.air ul .under-air .right {
+    position: absolute;
+    right: 0%;
+    top: 20px;
+}
+.air ul .above-air .right p,
+.air ul .under-air .right p {
+    font-size: 20px;
+    width: 500px;
+    color: #f0f0f0;
+}
+.air ul .above-air .right .p1
+,.air ul .under-air .right .p1 {
+    position: absolute;
+    top:5px;
+    font-size: 30px;
+    right: 0;
+    /* color:tomato; */
+
+}
+.air ul .above-air .right .p2,
+.air ul .under-air .right .p2 
+{
+    position: absolute;
+    top:55px;
+    right: 20px;
+    width: 400px;
+    font-size: 25px;
+    /* color:tomato; */
+    /* 单行文本溢出 */
+    text-overflow: ellipsis;
+    
+    overflow: hidden;
+    white-space: nowrap;
+}
+.air ul .above-air .right .p4
+,.air ul .under-air .right .p4 {
+    position: absolute;
+    top:100px;
+    right: 0;
+    font-size: 15px;
+    color: #000;
+
+}
+.air ul .above-air .right .p4 span:nth-child(2n)
+,.air ul .under-air .right .p4 span:nth-child(2n) {
+    color: peru;
+}
+.air ul .above-air .right .p3
+,.air ul .under-air .right .p3 {
+    position: absolute;
+    top:150px;
+    right: 20px;
+    font-size: 25px;
+    /* 文本文字溢出 */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient:vertical;
+    /* 首行缩进 */
+    text-indent: 2em;
+}
+/* 图 */
+.historytoday {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: cornflowerblue;
+}
+.historytoday .pic2 img {
+    width: 100%;
+    height: 100px;
+}
+/* 兵器科技 */
+.arms {
+    position: relative;
+    width: 100%;
+    height: 740px;
+    background-color: #fff;
+}
+.arms h2 {
+    font-size: 30px;
+    padding-left: 20px;
+    color: #10ac84;
+}
+.arms ul {
+    position: absolute;
+    width: 95%;
+    left: 30px;
+    height: 620px;
+}
+/* 兵器布局 */
+.arms ul li {
+    position: relative;
+    float: left;
+    width: 260px;
+    height: 296px;
+    background: #000;
+    border-radius: 20px 20px 10px 10px;
+    box-sizing: border-box;
+    margin: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.arms ul li:hover {
+    box-shadow : 5px 5px 10px 5px #10ac84 ;
+}
+.arms img {
+    display: inline-block;
+    width: 260px;
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+}
+/* 兵器科技的文字部分 */
+.bq-wark p {
+    font-size: 20px;
+    left: 5px;
+}
+.bq-wark a p:nth-of-type(1) {
+    position: absolute;
+    top: 150px;
+    color: #fff;
+}
+.bq-wark  p:nth-last-child(1) {
+    position: absolute;
+    bottom: 5px;
+}

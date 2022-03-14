@@ -1,0 +1,314 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+i {
+    font-family: 'icomoon';
+    font-style: normal;
+}
+/* 奇怪的选择器增加了 */
+[title] {
+    text-align: left;
+    color: brown;
+    margin-left:50px;
+}
+/* 注册那一行 */
+input[title] {
+    margin-top: 20px;
+    background: lightgreen;
+    color: black;
+    border-radius: 5%;
+    border: lightgreen 2px solid ;
+    box-sizing: border-box;
+    margin-left: 90px;
+}
+
+input[type="button"] {
+    float: right;
+    margin-left: 20px;
+}
+/* 对齐边框 */
+.ul00:nth-of-type(-n+3) {
+    width: 500px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin: auto;
+}
+h2 {
+    text-align: center;
+    font-size: 20px;
+}
+main {
+    background: rgb(235, 234, 234);
+    width: 600px;
+    margin: auto;
+    height: 700px;
+    font-size: 18px;
+}
+main li {
+    text-align: left;
+    margin-left: 90px;
+    margin-top: 2px;
+}
+.sign {
+    height: 60px;
+    vertical-align: baseline;
+}
+.sign textarea{
+    margin-top: -20px;
+    float: right;
+    margin-right: 50px;
+}
+.li01 i {
+    font-size: 40px;
+    color: gray;
+}
+/* 个性签名表单基本对齐 */
+.li01 input {
+    width: 150px;
+    float: right;
+    margin-right: 120px;
+}
+/* 所在地区 */
+.selec {
+    margin-top: -20px;
+    float: right;
+    margin-right: 220px;
+}
+.selec01 {
+    margin-top: -20px;
+    float: right;
+    margin-right: 80px;
+}
+.sex {
+    margin-right: 200px;
+    float: right;
+}
+/* 账号 */
+.ul02 {
+    width: 500px;
+    height: 60px;
+}
+.ul02 li span {
+    margin-left: 50px;
+}
+.ul02  li input:nth-of-type(1) {
+    width: 200px;
+    /* margin-top: -20px; */
+    float: right;
+    margin-right: 30px;
+}
+.notice-list {
+    width: 500px;
+    float: left;
+}
+.notice-list span{
+    float: left;
+}
+.notice-list .list01{
+    float: right;
+    margin-right: 40px;
+}
+.notice-list .list02{
+    margin-right: 155px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

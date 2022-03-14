@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录注册</title>
+    <link rel="stylesheet" href="../期末/css/base.css">
+    <link rel="stylesheet" href="../期末/css/reset.css">
+    <link rel="stylesheet" href="../期末/css/style.css">
+    <link rel="stylesheet" href="../期末/css/login.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="header-wrap" style="height:100px;">
+
+        <!-- 导航条横幅 -->
+        <div id="float_banner" class="caption">
+            <!-- 导航内部 -->
+            <div class="caption-center wrapper">
+                <ul>
+                    <!-- logo -->
+                    <li>
+                        <div class="logo">
+                            <a href="../期末/index.html">
+                                <img src="../期末/img/主页/主体形象区/logo.jpg" alt="" width="50">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- 首页图标 -->
+                        <div class="home">
+                            <div class="nav">
+                                <input type="checkbox" name="" id="" />
+                                <span></span>
+                                <span></span>
+                                <ul>
+                                    <li><a href="../期末/要闻时政.html">要闻时政</a></li>
+                                    <li><a href="JavaScript:void(0)">军事纵横</a></li>
+                                    <li><a href="../期末/航天航空.html">航天航空</a></li>
+                                    <li><a href="../期末/兵器科技.html">兵器科技</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <!-- 搜索框 -->
+                        <div class="search-wrap">
+                            <div class="search">
+                                <Form action="JavaScript:void(0)">
+                                    <input type="submit" value="">
+                                    <input type="search" placeholder="搜索">
+                                </Form>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <!-- 投稿 -->
+                        <div class="tog">
+                            <a href="JavaScript:void(0)">投稿</a>
+                        </div>
+                        <!-- <a href="JavaScript:void(0)"></a> -->
+                    </li>
+                    <li>
+                        <!-- 头像 -->
+                        <div class="profile">
+
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="msg">
+                            <a href="JavaScript:void(0)">消息</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="fo">
+                            <a href="JavaScript:void(0)">动态</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- 个人资料 -->
+        <form action="JavaScript:void(0)">
+            <h2>注册登录</h2>
+            <p title="basic">基本个人资料</p>
+            <ul class="ul00">
+
+                <li class="li01">
+                    <label for="profile">
+                        <i></i>
+                    </label>
+                    <span>上传头像</span>
+
+                    <input type="file" value="添加头像" id="profile">
+                </li>
+                <li class="li01">
+                    <span>昵称</span>
+                    <input name="username jz" placeholder="请输入你的昵称(必填）" required="required" maxlength="20">
+                    <p>支持中英文，长度不超过20个字符</p>
+                </li>
+                <!-- 选填 -->
+                <li>
+                    <span>性别</span>
+                    <div class="sex">
+                        <input type="radio" id="male" name="sex" checked>
+                        <label for="male"><span>男</span></label>
+                        <input type="radio" id="female" name="sex">
+                        <label for="female"><span>女</span></label>
+                    </div>
+                </li>
+                <li class="li01">
+                    <p>所在地区</p>
+                    <select class="selec">
+                        <option selecteds="selecteds">中国 </option>
+                        <option>海外 </option>
+                    </select>
+
+                    <!-- <input type="text" name="area"  value="请选择所在地区" id="area"> -->
+                    <select area class="selec01">
+
+                        <option selected="selecteds">北京</option>
+                        <option>河北</option>
+                        <option>山东</option>
+                        <option>辽宁</option>
+                        <option>黑龙江</option>
+                        <option>甘肃</option>
+                        <option>吉林</option>
+                        <option>青海</option>
+                        <option>河南</option>
+                        <option>江苏</option>
+                        <option>湖北</option>
+                        <option>湖南</option>
+                        <option>江西</option>
+                        <option>浙江</option>
+                        <option>广东</option>
+                        <option>江西</option>
+                        <option>广东</option>
+                        <option>云南</option>
+                        <option>福建</option>
+                        <option>台湾</option>
+                        <option>海南</option>
+                        <option>山西</option>
+                        <option>四川</option>
+                        <option>陕西</option>
+                        <option>贵州</option>
+                        <option>安徽</option>
+                        <option>重庆</option>
+                        <option>上海</option>
+                        <option>天津</option>
+                        <option>内蒙古自治区</option>
+                        <option>广西壮族自治区</option>
+                        <option>西藏自治区</option>
+                        <option>新疆维吾尔自治区</option>
+                        <option>宁夏回族自治区</option>
+                        <option>澳门特别行政区</option>
+                        <option>香港特别行政区</option>
+                    </select>
+                </li>
+                <li class="li01">
+                    <span>出生日期</span>
+                    <input type="date">
+                </li>
+                <li class="li01">
+                    <span>邮箱</span>
+                    <input type="email" name="jz" placeholder="请输入你的邮箱地址">
+                </li>
+                <li class="li01">
+                    <span>个人主页</span>
+                    <input type="url">
+                </li>
+
+                <li>
+                    <span>兴趣爱好</span>
+                    <input type="checkbox" id="sport" name="hobby" value="运动">
+                    <label for="sport">运动</label>
+                    <input type="checkbox" id="ENT" name="hobby" value="娱乐">
+                    <label for="ENT">娱乐</label>
+                    <input type="checkbox" id="game" name="hobby" value="游戏" checked>
+                    <label for="game">游戏</label>
+                    <input type="checkbox" id="music" name="hobby" value="音乐">
+                    <label for="music">音乐</label>
+                    <input type="checkbox" id="art" name="hobby" value="文艺">
+                    <label for="art">文艺</label>
+                </li>
+                <li class="sign li01">
+                    <p>个性签名:</p>
+                    <textarea name="sign jz" id="sign" cols="30" rows="3"></textarea>
+                </li>
+            </ul>
+            <!-- 账号与安全 -->
+            <p title="id">账号与安全</p>
+            <ul class="ul02">
+                <li>
+                    <span>手机号</span>
+                    <input type="tel" name="jz"  placeholder="请输入你的手机号">
+                    
+                </li>
+                <li>
+                    <span>密码</span>
+                    <input type="password" placeholder="请输入你的密码" required="required">
+                </li>
+            </ul>
+            <!-- 通知消息 -->
+            <p title="notice">通知信息</p>
+            <ul>
+
+                <li class="notice-list">
+                    <span>评论与回复</span>
+                    <div class="list01">
+                    <input type="radio" id="anybody" name="comment" value="所有人">
+                    <label for="anybody">所有人</label>
+                    <input type="radio" id="followed" name="comment" value="我关注的人" checked>
+                    <label for="followed">我关注的人</label>
+                    <input type="radio" id="none" name="comment" value="不接受通知">
+                    <label for="none">不接受通知</label>
+                </div>
+                </li>
+                <li class="notice-list">
+                    <span>关注了你</span>
+                    <div class="list01 list02">
+                    <input type="radio" id="anybody" name="follow" value="所有人" checked>
+                    <label for="anybody">所有人</label>
+
+                    <input type="radio" id="none" name="follow" value="不接受通知">
+                    <label for="none">不接受通知</label>
+                </div>
+                </li>
+                <li class="notice-list">
+                    <span>赞了你</span>
+                    <div class="list01  list02">
+                    <input type="radio" id="anybody" name="like" value="所有人" checked>
+                    <label for="anybody">所有人</label>
+
+                    <input type="radio" id="none" name="like" value="不接受通知">
+                    <label for="none">不接受通知</label>
+                </div>
+                </li>
+            </ul>
+            <!-- 提交+重置+注销 -->
+            <ul>
+                <input type="submit" value="点击注册" title="sum">
+                <input type="submit" value="点击登录" title="sum">
+                <input type="reset" value="点击重置" title="sum">
+
+            </ul>
+        </form>
+    </main>
+</body>
+
+</html>
