@@ -10,6 +10,9 @@ var option = {
     toolbox: {
 
     },
+    grid:{
+        containLabel:true, //图表包含坐标轴
+    },
     tooltip: {
         trigger: 'axis',
         axisPointer: {  
@@ -29,17 +32,17 @@ var option = {
         {
             name: '直接访问',
             type: 'bar',
-            stack: "233",
+            stack: "233", //推叠
             data: [320, 332, 301, 334, 390, 330, 320],
             itemStyle: {
-                normal: {
-                    label: {
+                normal: { 
+                    label: {//文本标记
                         show: true,
                         position: 'inside'
                     }
                 },
-                emphasis: {  //鼠标经过
-                    focus: 'series',
+                emphasis: {  //高亮<em>强调，鼠标经过
+                    focus: 'series',//焦点与数据序列
                 }
 
 

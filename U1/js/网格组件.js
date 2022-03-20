@@ -28,7 +28,6 @@ var option = {
         // y:70,
         // x2:200,
         // y2:30,
-        
 
         width:"80%",
         height:"80%",

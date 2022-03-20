@@ -20,7 +20,8 @@
             "sourceMaps": true,
             "webRoot": "${workspaceRoot}",
             "userDataDir":"${tmpdir}",
-            "port":9222
+            "port":9222,
+            // "port":8080,
 
         }
     ]
