@@ -58,32 +58,27 @@ var option = {
     },
     brush: {   //组件区域选择
     },
-    graphic: {
+    // graphic: {
 
-        type: 'rect',
-        // left: 'center', // 相对父元素居中
-        // top: 'middle',  // 相对父元素居中
-        shape: {
-            x: 190.40,
-            y: 52.0,
-            width: 150,
-            height: 200,
-        },
-        style: {
-            border:'dashed',
-            fill: '#fff',
-            stroke: '#fab1a0',
-            lineWidth: 2,
-            shadowColor: 'rgba(0,0,0,0.3)'
-        }
+    //     type: 'rect',
+    //     // left: 'center', // 相对父元素居中
+    //     // top: 'middle',  // 相对父元素居中
+    //     shape: {
+    //         x: 190.40,
+    //         y: 52.0,
+    //         width: 150,
+    //         height: 200,
+    //     },
+    //     style: {
+    //         border:'dashed',
+    //         fill: '#fff',
+    //         stroke: '#fab1a0',
+    //         lineWidth: 2,
+    //         shadowColor: 'rgba(0,0,0,0.3)'
+    //     }
 
-    },
-    markArea:{ //标记区域
-        
-        itemStyle:{
-            
-        }
-    },
+    // },
+
     tooltip: { //提示框
         trigger: 'item|mousemove|click',//图形触发
         axisPointer: {
@@ -130,6 +125,27 @@ var option = {
                     }
                 ],
             },
+            markArea: { //标记区域
+                itemStyle: {
+                    color: 'transparent',
+                    borderWidth: 1,
+                    borderType: 'dashed',  //边框，虚线
+                    borderColor: '#fab1a0'
+                },
+                data: [[
+
+                    {
+                        name:'女性分布区间',
+                        xAxis: 'min',
+                        yAxis: 'min',
+                       
+                    },
+                    {
+                        xAxis: 'max',
+                        yAxis: 'max',
+                    }
+                ]]
+            },
             markLine: {
                 data: [
                     {
@@ -163,6 +179,27 @@ var option = {
                     }
                 ],
             },
+            markArea: { //标记区域
+                itemStyle: {
+                    color: 'transparent',
+                    borderWidth: 1,
+                    borderType: 'dashed',  //边框，虚线
+                    borderColor: '#3498db'
+                },
+                data: [[
+                    // 因为数据是二维的，所以
+                    {
+                        name:'男性分布区间',
+                        xAxis: 'min',
+                        yAxis: 'min',
+                       
+                    },
+                    {
+                        xAxis: 'max',
+                        yAxis: 'max',
+                    }
+                ]]
+            },
             markLine: {
                 data: [
                     {
@@ -174,7 +211,7 @@ var option = {
                     }
                 ]
             }
-
+            
 
         }
     ]

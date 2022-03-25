@@ -50,7 +50,9 @@ var pie1 = [
    },
 ]
 var option = {
-
+   grid:{
+      containLabel: true, 
+   },
    tooltip:{
       formatter:"访问来源"+"</br>"+"{b}:{c}({d}%)"
    },
@@ -78,7 +80,7 @@ var option = {
          x: 160,
          y: 100,
          type: 'pie',
-         radius: ["50%", "75%"],
+         radius: ["50%", "75%"],//1内半径，2外半径
          data: pie1,
 
          label: {
@@ -143,9 +145,11 @@ var option = {
          },
          labelLine:{
             show:true,
-            showAbove:true,
-            length:80,
-            length2:20,
+            showAbove:true, 
+            length:30,
+            // length:80, #第一段
+   
+            // length2:20,
             minTurnAngle:105,//引导线夹角
          }
       },
