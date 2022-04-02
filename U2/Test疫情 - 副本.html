@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>23333</title>
+    <!-- 引入Echarts脚本 -->
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- vue  -->
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" type="text/css" href="./css/Test疫情.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head"></div>
+        <section>
+            <div class="nav">
+                <!--  -->
+                <li>国内疫情</li>
+                <li>国外疫情</li>
+                <li>实时播放</li>
+            </div>
+            <!-- chinaAdd -->
+            <div class="data">
+                <div id="data0" v-cloak>
+                    <h1>国内疫情</h1>
+                    <p v-cloak id="Upttime">数据更新至{{Uptime}}</p>
+
+                    <div class="data1">
+                        
+                        <div>
+                            <p>新增确诊</p>
+                            <p>{{Ncf}}</p>
+                        </div>
+                        <div>
+                            <p>新增本土</p>
+                            <p>{{NlCH5}}</p>
+                        </div>
+                        
+                        <div>
+                            <p>新增境外</p>
+                            <p>{{NiC}}</p>
+                        </div>
+                        <div>
+                            <p>新增无症状</p>
+                            <p>{{Nnif}}</p>
+                        </div>
+                        <!-- ECf,ElcfH5,EnIf] -->
+                        <div>
+                            <p>现有确诊</p>
+                            <p>{{ECf}}</p>
+                        </div>
+                        <div>
+                            <p>现有本土</p>
+                            <p>{{ElcfH5}}</p>
+                        </div>
+                        <div>
+                            <p>现有境外</p>
+                            <p></p>
+                        </div>
+                        <div>
+                            <p>现有无症状</p>
+                            <p>{{EnIf}}</p>
+                        </div>
+                        <div class="hr"></div>
+                        <div>
+                            <p>累计确诊</p>
+                            <p></p>
+                            <p>较昨日+</p>
+                        </div>
+                        <div>
+                            <p>累计境外</p>
+                            <p></p>
+                            <p>较昨日+</p>
+                        </div>
+                        
+                        <div>
+                            <p>累计治愈</p>
+                            <p></p>
+                            <p>较昨日+</p>
+                        </div>
+                        <div>
+                            <p>累计死亡</p>
+                            <p></p>
+                            <p>较昨日+</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- 为Echarts准备一个具备宽高的容器 -->
+        <div id="main" style="width: 768px; height: 600px;border:1px solid black; background-color: #f8f9fa;"></div>
+    </div>
+
+
+    <script src="js/Test疫情.js"></script>
+
+</body>

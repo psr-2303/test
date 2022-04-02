@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+body {
+    background-color: #10aeb5;
+}
+
+.container {
+    width: 768px;
+    min-height: 300px;
+    margin: 0 auto;
+    padding: 17px;
+}
+
+.head {
+    width: 768px;
+    color: #fff;
+
+    padding: 0;
+    height: 187px;
+    background-size: 768px 189px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #10aeb5;
+    background-image: url('https://mms-res.cdn.bcebos.com/mms-res/voicefe/captain/images/79cc66862a95704652df8c41b269afdd.png?size=1434*378');
+}
+
+section {
+    width: 768px;
+    min-height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+/* 导航 */
+.nav {
+    width: auto;
+    height: 300px;
+    border-bottom: 1px solid #ccc;
+
+}
+/* 导航切换 */
+.nav-fixed {
+    display:flex;
+    justify-content:space-around;
+    width: 100%;
+    height: 50px;
+    background-color: pink;
+    /* 固定 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    
+
+}
+
+.data {
+    width: auto;
+    height: 300px;
+    border-bottom: 1px solid #ccc;
+}
+/* Upttime */
+#Upttime {
+    font-size: 14px;
+}
+.data1 {
+    display: flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+
+}
+.data1 div {
+    width: 150px;
+    margin: 5px;
+}
+.data1 .hr {
+    border:0.1px solid #eeeeee;
+
+    width:780px;
+    border-width: 0.1;
+    height: 0;
+    margin: 5px;;
+ }
+ .data1 div p:nth-of-type(2) {
+    color:orange;
+    font-size:30;
+
+ }
+ .data1 div p:nth-of-type(3) {
+     
+ }

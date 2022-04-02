@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>23333</title>
+    <!-- 引入Echarts脚本 -->
+    <script src="./js/echarts.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <!-- vue  -->
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="./json/world.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head"></div>
+        <section>
+            <div class="nav">
+                <!--  -->
+                <a href="#china">国内疫情</a>
+                <a href="#world">国外疫情</a>
+                <a href="#broadcast">实时播放</a>
+            </div>
+            <div id="china" v-cloak>
+                <h3 >国内疫情</h3>
+               
+                <div v-cloak class="data1">
+                    <p  class="Upttime">数据更新至  {{Uptime}}</p>
+                    <div>
+                        <p>新增确诊</p>
+                        <p>{{Ncf}}</p>
+                    </div>
+                    <div>
+                        <p>新增本土</p>
+                        <p>{{NlCH5}}</p>
+                    </div>
+
+                    <div>
+                        <p>新增境外</p>
+                        <p>{{NiC}}</p>
+                    </div>
+                    <div>
+                        <p>新增无症状</p>
+                        <p>{{Nnif}}</p>
+                    </div>
+                    <!-- ECf,ElcfH5,EnIf] -->
+                    <div>
+                        <p>现有确诊</p>
+                        <p>{{ECf}}</p>
+                    </div>
+                    <div>
+                        <p>现有本土</p>
+                        <p>{{ElcfH5}}</p>
+                    </div>
+                    <div>
+                        <p>现有境外</p>
+                        <p>756</p>
+                    </div>
+                    <div>
+                        <p>现有无症状</p>
+                        <p>{{EnIf}}</p>
+                    </div>
+                    <div class="hr"></div>
+                    <div>
+                        <p>累计确诊</p>
+                        <p>{{Lconfirm}}</p>
+                        <p>较昨日<span>+{{Ncf}}</span></p>
+                    </div>
+                    <div>
+                        <p>累计境外</p>
+                        <p>{{Limcase}}</p>
+                        <p>较昨日<span>+{{NiC}}</span></p>
+                    </div>
+
+                    <div>
+                        <p>累计治愈</p>
+                        <p>{{Lheal}}</p>
+                        <p>较昨日<span>+2536</span></p>
+                    </div>
+                    <div>
+                        <p>累计死亡</p>
+                        <p>{{Ldead}}</p>
+                        <p>较昨日<span>+{{Jdead}}</span></p>
+                    </div>
+                </div>
+
+                <div class="tab">
+                    <button id="xianyou" onclick=Alterc(this);>现有确诊
+                        
+                    </button>
+                    <button id="xinzen" onclick=Alterc(this);>新增确诊</button>
+                </div>
+                <div id="chinamain" style="width: 768px; height: 600px;border:1px solid black; background-color: #f8f9fa;"></div>
+            </div>
+            <div id="world">
+                <h3>国外疫情</h3>
+                <div id="worldData" v-cloak>
+                    <p  class="Upttime">数据更新至  {{}}</p>
+                    <div>
+                        <p>新增确诊</p>
+                        <p>{{}}</p>
+                    </div>
+                    <div>
+                        <p>新增死亡</p>
+                        <p>{{}}</p>
+                    </div>
+
+                    <div>
+                        <p>现有确诊</p>
+                        <p>{{}}</p>
+                    </div>
+                    <div>
+                        <p>累计确诊</p>
+                        <p>{{}}</p>
+                    </div>
+                    <!-- ECf,ElcfH5,EnIf] -->
+                    <div>
+                        <p>累计死亡</p>
+                        <p>{{}}</p>
+                    </div>
+                    <div>
+                        <p>累计治愈</p>
+                        <p>{{}}</p>
+                    </div>
+                    
+                </div>
+                <div class="tab">
+                    <button id="xianyou">现有确诊</button>
+                    <button id="xinzen">新增确诊</button>
+                </div>
+                <!-- <div id="chinamain" style="width: 768px; height: 600px;border:1px solid black; background-color: #f8f9fa;"></div> -->
+                <div id="worldMap" style="width: 768px; height: 600px;border:1px solid black; background-color: #f8f9fa;"></div>
+            </div>
+            <div id="broadcast">
+                <h3>实时通报</h3>
+                <h4>国内资讯</h4>
+                <ul>
+                    <li>
+                        <p> 04月01日  16:14</p>
+                        <p>喀麦隆志愿者助力中国疫情防控</p>
+                    </li>
+                    <li>
+                        <p>04月01日  16:09</p>
+                        <p>海南将严格落实七项疫情防控措施</p>
+                    </li>
+                    <li>
+                        <p>04月01日  15:54</p>
+                        <p>海南：对14天内疫情严重地区旅居史抵琼人员进行排查管控</p>
+                    </li>
+                    <li>疫情通报：</li>
+                    <li>疫情通报：</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+ 
+        
+
+    </div>
+    <script src="./js/test疫情.js"></script>
+    <script src="./js/test02.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

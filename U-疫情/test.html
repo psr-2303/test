@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>23333</title>
+    <!-- 引入Echarts脚本 -->
+    <script src="./js/echarts.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <!-- vue  -->
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="./json/world.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        
+            <div id="world">
+                <h3>国外疫情</h3>
+                <div id="worldData" v-cloak>
+                    <p  class="Upttime">数据更新至  {{}}</p>
+                    <div>
+                        <p>新增确诊</p>
+                        <p>{{}}</p>
+                    </div>
+                    <div>
+                        <p>新增死亡</p>
+                        <p>{{}}</p>
+                    </div>
+
+                    <div>
+                        <p>现有确诊</p>
+                        <p>{{}}</p>
+                    </div>
+                    <div>
+                        <p>累计确诊</p>
+                        <p>{{}}</p>
+                    </div>
+                    <!-- ECf,ElcfH5,EnIf] -->
+                    <div>
+                        <p>累计死亡</p>
+                        <p>{{}}</p>
+                    </div>
+                    <div>
+                        <p>累计治愈</p>
+                        <p>{{}}</p>
+                    </div>
+                    
+                </div>
+                <div class="tab">
+                    <button id="xianyou">现有确诊</button>
+                    <button id="xinzen">新增确诊</button>
+                </div>
+                <!-- <div id="chinamain" style="width: 768px; height: 600px;border:1px solid black; background-color: #f8f9fa;"></div> -->
+                <div id="worldMap" style="width: 768px; height: 600px;border:1px solid black; background-color: #f8f9fa;"></div>
+            </div>
+            
+        
+
+    </div>
+ 
+        
+
+    </div>
+    <!-- <script src="./js/test疫情.js"></script> -->
+    <script src="./js/test02.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+</body>
+</html>
