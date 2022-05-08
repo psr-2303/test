@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--引入ECharts脚本-->
+    <script src="js/echarts.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!---为ECharts准备一个具备大小（宽高）的DOM-->
+    <div id="main" style="width: 1300px; height: 1000px; border: 1px solid black"></div>
+
+    <script type="text/javascript">
+        //基于准备好的DOM，初始化ECharts图表
+        var myChart = echarts.init(document.getElementById("main"));
+
+
+        option = {
+            visualMap: {
+                show: false,
+                min: 0,
+                max: 10000
+            },
+            calendar: {
+                range: '2022'
+            },
+            series: {
+                type: 'heatmap',
+                coordinateSystem: 'calendar',
+                data: [new Date('2022-01-01'), 15]
+            }
+        };
+
+
+        myChart.setOption(option);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

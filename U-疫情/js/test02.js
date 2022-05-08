@@ -1,5 +1,4 @@
-var worldMap = echarts.init(document.getElementById("world"));
-// 国外疫情
+var worldMap = echarts.init(document.getElementById("worldMap"));
 var namemap = {
     "Afghanistan": "阿富汗",
     "Albania": "阿尔巴尼亚",
@@ -191,112 +190,138 @@ var namemap = {
     "Zambia": "赞比亚",
     "Zimbabwe": "津巴布韦"
 }
-
-
-
-let mapArr02 = []
-// 国外
 $.ajax({
     type: 'get',
-    url: 'https://api.inews.qq.com/newsqa/v1/automation/modules/list?modules=FAutoforeignList',
-    // dataType: 'json',
-
-    // success成功就会运行
+    // url: 'https://api.inews.qq.com/newsqa/v1/automation/modules/list?modules=FAutoGlobalStatis,FAutoContinentStatis,FAutoGlobalDailyList,FAutoCountryConfirmAdd',
+    url:'https://api.inews.qq.com/newsqa/v1/automation/modules/list?modules=FAutoCountryConfirmAdd,WomWorld,WomAboard',
+    dataType: 'json',
     success: function (res) {
-        // console.log(res.data.FAutoforeignList[0].children[0].confirm);
-        // console.log(res.data.FAutoforeignList[0].children);
-        // let obj = JSON.parse(res)
-        let data_1 = res.data.FAutoforeignList[0].children
-        // 
-        // let data_1 = JSON.parse(res.data.FAutoforeignList[0].children)
         
-        for (var i = 0; i < data_1.length; i++) {
+        let data_1 = res.data.WomAboard
+        console.log(data_1[0].confirmAdd)
+        let mapArrWorld = []
+        let mapArrWorld2 = []
+        for (let i = 0; i < data_1.length; i++) {
             let item = {
                 name: data_1[i].name,
-                value: data_1[i].confirm,
+                value: data_1[i].nowConfirm,
             }
-            mapArr02.push(item)
-            // console.log(item)
+            let item2 = {
+                name: data_1[i].name,
+                value: data_1[i].confirmAdd,
+            }
+            mapArrWorld.push(item)
+            mapArrWorld2.push(item2)
+            // mapArrWorld2.push(item2)
         }
-        // console.log(mapArr02)
-        setWorldEchart1(mapArr02)
+        console.log(mapArrWorld2)
+        setWorldEchart(mapArrWorld)
+        // window.onload = function () {
+            // 点击ajax
+    document.getElementById("leiji2").onclick = function () {
+        setWorldEchart(mapArrWorld)
     }
-    
+    document.getElementById("xianyou2").onclick = function () {
+        setWorldEchart(mapArrWorld2)
+
+        // console.log(233)
+    }
+    }
 })
 
-// setWorldEchart1(mapArr02)
-// setWorldEchart1(mapArr02)
-
-// 地图
-function setWorldEchart1(data) {
-
-    // 缩放的数值范围
+    
+function setWorldEchart(data) {
     var worldMap_option = {
+        title: {
+            top: "40px",
+            left: '30%',
+            text: '累计确诊病例数，包含治愈、死亡',
+            textStyle: {
+                color: '#9fa09d',
+            }
+
+        },
         tooltip: {
             formatter: function (res) {
-                return res.name + ':' + res.value;
+                return res.name + ':' + res.value
             }
         },
-        // geo: {
-        //     zoom: 1,//初始缩放比例，布尔，num
-        // },
+        series: [
+            {
+                type: 'map',  //地图类型
+                map: 'world',  //使用world.js地图（无需注册）
+                nameMap: namemap,
+                itemStyle: {
+                    emphasis: { label: { show: true } }
+                },
+                data: data
+            }
+        ],
         visualMap: {
+            color: ['#2F0000', '#4D0000', '#600000', '#750000', '#930000', '#AE0000', '#CE0000', '#FF9797'],
+            // color:['#ffe5db','#ffe5db','#ffc4b3','#ff9985','#ff6a57','#e83132','#b80909','#8a0808'],
             type: 'piecewise',
             pieces: [
                 {
                     min: 10000000,
                     label: '>=1000万',
-                    color: '#b80909',
                 },
                 {
                     min: 5000000,
                     max: 10000000,
                     label: '500万-1000万',
-                    color: '#e64546',
                 },
                 {
-                    min: 5000000,
-                    max: 1000000,
+                    min: 1000000,
+                    max: 4999999,
                     label: '100万-500万',
-                    color: '#f57567',
                 },
                 {
-                    min: 10,
-                    max: 99,
-                    label: '10-9',
-                    color: '#ff9985',
+                    min: 100000,
+                    max: 999999,
+                    label: '10万-100万',
+                },
+                {
+                    min: 10000,
+                    max: 99999,
+                    label: '1万-10万',
+                },
+                {
+                    min: 5000,
+                    max: 9999,
+                    label: '5000-9999',
                 },
                 {
                     min: 1,
-                    max: 9,
-                    label: '1-9',
-                    color: '#ead5d5',
+                    max: 4999,
+                    label: '1-4999',
                 },
                 {
                     max: 0,
                     label: '0',
-                    color: '#efeeee',
                 },
             ]
-
         },
-        series: [
-            {
-                //形参
-                type: 'map',
-                map: 'world',
-                nameMap: namemap,
-                itemStyle: {
-                    emphasis: {
-                        label: {
-                            show: true,
-                        },
-                    }
-                },
-                data: mapArr02,
-            }
-        ],
-    };
-    worldMap.setOption(worldMap_option);
+    }
+    worldMap.setOption(worldMap_option)
 }
 
+
+function setdata2(data) {
+    const app = Vue.createApp({
+        data() {
+            // 数据写入return
+
+            return {
+                Uptime2: Uptime2,
+                Ncf2: Ncf2,
+                Nco2: Nco2,
+                Ndead2: Ndead2,
+                Nheal2: Nheal2,
+            }
+
+        },
+    });
+    //vm 根组件
+    const vm = app.mount('#worldData');
+}

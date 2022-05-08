@@ -13,7 +13,7 @@ $.ajax({
     success: function (res) {
 
         let obj = JSON.parse(res.data)
-        console.log(obj.areaTree[0]);
+        // console.log(obj.areaTree[0]);
 
         // 现有
         let arr = obj.areaTree[0].children
@@ -178,7 +178,7 @@ function setdata(data) {
         // 存入方法
         methods: {
             farmat(num) {
-                if (num == nill)
+                if (num == null)
                     return;
                 let n = parse(num).toString();
                 let len = n.length;
